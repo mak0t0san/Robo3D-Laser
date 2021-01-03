@@ -2,11 +2,9 @@
 
 
 ## WARNING!!! 
-Working with lasers can be dangerous.  Wear proper protection. 
-
-Using high power lasers to engrave or cut will create smoke and fumes. Use in a well ventilated area.
-
-This guide is provided without any guarantees or warranties.  I am not responsible for any property damage or injuries.
+### Working with lasers can be dangerous.  Wear proper protection. 
+### Using high power lasers to engrave or cut will create smoke and fumes. Use in a well ventilated area.
+### This guide is provided without any guarantees or warranties.  I am not responsible for any property damage or injuries.
 
 
 
