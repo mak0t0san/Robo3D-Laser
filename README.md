@@ -34,10 +34,13 @@ Before removing your extruder, make sure you are able to print this mount for th
   Remove the bottom cover from the R1. We'll need to get to the board. The R1 has a modified version of the RAMPS 1.4 board (which is mounted to an Arduino). Once you have the bottom cover off, locate the fan wire.  It's a plug towards the top-right (if you laid your R1 on the left side) of the board and is labeled "FAN". Disconnect the fan from here and then plug in the laser module.  The connector on the laser module is not the same as the fan plug but it will fit in place as the pin size and spacing is the same. Make sure to match up the polarity correctly (Red +, Black -).
   </li>
   </ul>
+  See this image: ![Fan connector](https://raw.githubusercontent.com/mak0t0san/Robo3D-Laser/main/assets/fan-connector.png "Fan connector")
   </dd>
   <dt><h2>Usage</h2></dt>
   <dd>
   This laser module was designed to be able to be added and removed quickly by swapping out the fan for the laser.  At this point, you should be good to go to use the laser, just make sure that the software that you're using uses <code>M106</code> and <code>M107</code> to turn on and off the laser instead of <code>M3</code> and <code>M5</code>. However, using this setup without updating your firmware will limit you quite a bit.  The default firmware doesn't support arc commands (<code>G2</code> or <code>G3</code>) and also doesn't support inline laser power.  You'll be limited to what you can use the laser for.  <br>
   I have created a configuration for Marlin that will allow your R1 to act like a proper laser engraver.
+  <br><br>
+  There are a couple of important features that have been enabled. Mainly, support for G2 and G3 arc commands, and <code>LASER_POWER_INLINE</code>.  This allows <code>G1</code> commands to specify laser power via the <code>S</code> parameter. This enables the planner to change the laser output and continue to move smoothly.
   </dd>
 </dl>
